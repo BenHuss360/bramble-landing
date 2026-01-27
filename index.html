@@ -114,7 +114,8 @@ section{padding:120px 0}
 .phone-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .phone-text .section-subtitle{margin-bottom:32px}
 .phone-frame{width:280px;height:560px;background:#1a1a1a;border-radius:36px;padding:12px;margin:0 auto;box-shadow:0 40px 80px rgba(5,32,0,0.2),0 0 0 1px rgba(255,255,255,0.05);position:relative}
-.phone-screen{width:100%;height:100%;border-radius:26px;overflow:hidden;background:var(--forest);position:relative}
+.phone-frame{overflow:hidden}
+.phone-screen{width:100%;height:100%;border-radius:26px;overflow:hidden;background:var(--forest);position:relative;contain:paint}
 .phone-notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:100px;height:28px;background:#1a1a1a;border-radius:0 0 16px 16px;z-index:10}
 /* Map background with paths, trees, water */
 .phone-map{position:absolute;inset:0;background:linear-gradient(160deg,#173d20 0%,#0e2a14 30%,#1a4025 50%,#122e18 80%,#0a2010 100%);overflow:hidden}
@@ -126,14 +127,14 @@ section{padding:120px 0}
 .phone-mapbar-pill{font-size:8px;letter-spacing:1px;text-transform:uppercase;color:var(--cream);opacity:0.5;background:rgba(251,247,244,0.08);padding:3px 8px;border-radius:10px}
 /* Pins */
 /* Teardrop map pins */
-.map-pin{position:absolute;width:20px;height:26px;opacity:0;animation:pinDrop 0.5s cubic-bezier(0.34,1.56,0.64,1) forwards;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.35))}
-.map-pin::before{content:'';position:absolute;top:0;left:0;width:20px;height:20px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--rose);border:2px solid rgba(255,255,255,0.9)}
+.map-pin{position:absolute;width:20px;height:26px;opacity:0;animation:pinDrop 0.5s cubic-bezier(0.34,1.56,0.64,1) forwards}
+.map-pin::before{content:'';position:absolute;top:0;left:0;width:20px;height:20px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--rose);border:2px solid rgba(255,255,255,0.9);box-shadow:0 2px 6px rgba(0,0,0,0.35)}
 .map-pin::after{content:'';position:absolute;top:5px;left:6px;width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.85)}
-.map-pin:nth-child(1){top:18%;left:28%;animation-delay:0.5s}
-.map-pin:nth-child(2){top:32%;left:58%;animation-delay:1.2s}
-.map-pin:nth-child(3){top:48%;left:32%;animation-delay:1.8s}
-.map-pin:nth-child(4){top:42%;left:72%;animation-delay:2.4s}
-.map-pin:nth-child(5){top:42%;left:52%;animation-delay:3s}
+.map-pin:nth-child(2){top:28%;left:24%;animation-delay:0.5s}
+.map-pin:nth-child(3){top:30%;left:62%;animation-delay:1.2s}
+.map-pin:nth-child(4){top:50%;left:20%;animation-delay:1.8s}
+.map-pin:nth-child(5){top:42%;left:46%;animation-delay:2.4s}
+.map-pin:nth-child(6){top:58%;left:64%;animation-delay:3s}
 /* GPS dot with accuracy ring */
 .map-gps{position:absolute;width:14px;height:14px;border-radius:50%;background:#4a9eff;border:2.5px solid white;z-index:5;box-shadow:0 0 12px rgba(74,158,255,0.5);animation:gpsJourney 22s ease-in-out infinite}
 .map-gps::after{content:'';position:absolute;inset:-8px;border-radius:50%;background:rgba(74,158,255,0.12);animation:gpsRing 2s ease infinite}
@@ -141,40 +142,40 @@ section{padding:120px 0}
 @keyframes gpsRing{0%,100%{transform:scale(1);opacity:0.12}50%{transform:scale(1.3);opacity:0.06}}
 /* GPS journey: organic wandering path visiting pin 1 then pin 5 */
 @keyframes gpsJourney{
-  0%  {top:74%;left:16%}
-  3%  {top:70%;left:18%}
-  6%  {top:65%;left:15%}  /* slight westward drift */
-  9%  {top:58%;left:19%}
-  12% {top:52%;left:22%}
-  14% {top:46%;left:20%}  /* curves left around trees */
-  17% {top:40%;left:24%}
-  19% {top:33%;left:26%}
-  21% {top:25%;left:29%}  /* approaching pin 1 */
-  23% {top:18%;left:28%}  /* arrives at pin 1 */
-  34% {top:18%;left:28%}  /* pauses — card 1 showing */
-  37% {top:22%;left:32%}  /* departs south-east */
-  39% {top:26%;left:36%}
-  41% {top:30%;left:33%}  /* meanders west a bit */
-  43% {top:34%;left:37%}
-  46% {top:37%;left:42%}
-  48% {top:33%;left:46%}  /* curves north-east */
-  51% {top:36%;left:50%}
-  54% {top:40%;left:48%}  /* dips south */
-  57% {top:38%;left:44%}  /* loops back west */
-  59% {top:36%;left:48%}
-  62% {top:39%;left:51%}  /* approaching pin 5 */
-  64% {top:42%;left:52%}  /* arrives at pin 5 */
-  76% {top:42%;left:52%}  /* pauses — card 2 showing */
-  78% {top:46%;left:49%}  /* departs southward */
-  80% {top:50%;left:44%}
-  82% {top:54%;left:40%}  /* curves south-west */
-  84% {top:58%;left:36%}
-  86% {top:62%;left:32%}
-  88% {top:66%;left:28%}  /* winding back */
-  91% {top:68%;left:24%}
-  94% {top:71%;left:20%}
-  97% {top:73%;left:17%}
-  100%{top:74%;left:16%}  /* seamless loop */
+  0%  {top:76%;left:40%}
+  3%  {top:72%;left:36%}
+  6%  {top:66%;left:32%}
+  9%  {top:58%;left:28%}
+  12% {top:50%;left:25%}
+  14% {top:44%;left:22%}  /* curves west */
+  17% {top:36%;left:20%}
+  19% {top:30%;left:23%}
+  21% {top:32%;left:25%}  /* approaching pin 1 */
+  23% {top:28%;left:24%}  /* arrives at pin 1 */
+  34% {top:28%;left:24%}  /* pauses — card 1 showing */
+  37% {top:26%;left:30%}  /* departs south-east */
+  39% {top:30%;left:36%}
+  41% {top:34%;left:40%}  /* meanders east */
+  43% {top:38%;left:44%}
+  46% {top:36%;left:50%}  /* curves north-east */
+  48% {top:40%;left:54%}
+  51% {top:44%;left:58%}
+  54% {top:48%;left:62%}  /* dips south */
+  57% {top:52%;left:66%}  /* curves east */
+  59% {top:54%;left:64%}
+  62% {top:56%;left:65%}  /* approaching pin 5 */
+  64% {top:58%;left:64%}  /* arrives at pin 5 */
+  76% {top:58%;left:64%}  /* pauses — card 2 showing */
+  78% {top:62%;left:60%}  /* departs southward */
+  80% {top:64%;left:54%}
+  82% {top:66%;left:50%}  /* curves south-west */
+  84% {top:68%;left:46%}
+  86% {top:70%;left:44%}
+  88% {top:72%;left:42%}  /* winding back */
+  91% {top:74%;left:41%}
+  94% {top:75%;left:40%}
+  97% {top:76%;left:40%}
+  100%{top:76%;left:40%}  /* seamless loop */
 }
 /* Story cards — two cards at two different pins */
 .phone-card{position:absolute;bottom:0;left:0;right:0;background:var(--cream);border-radius:16px 16px 0 0;overflow:hidden;transform:translateY(100%);box-shadow:0 -4px 30px rgba(0,0,0,0.3);z-index:9}
