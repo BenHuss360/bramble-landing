@@ -155,10 +155,10 @@ section{padding:120px 0}
 .exp-card{border:1px solid rgba(251,247,244,0.1);border-radius:6px;padding:40px 36px;transition:all 0.4s ease;position:relative;overflow:hidden;background:rgba(251,247,244,0.03)}
 .exp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(251,247,244,0.12),transparent)}
 .exp-card:hover{border-color:rgba(251,247,244,0.16);transform:translateY(-3px);box-shadow:0 20px 60px rgba(0,0,0,0.25);background:rgba(251,247,244,0.05)}
-.exp-icon{margin-bottom:24px}
-.exp-icon svg{width:28px;height:28px;stroke-width:1.5;opacity:0.8}
-.exp-card:hover .exp-icon svg{opacity:1}
-.exp-card h3{font-family:'Cormorant Garamond',serif;font-size:26px;margin-bottom:14px;color:var(--cream)}
+.exp-icon{position:absolute;top:28px;right:28px;opacity:0.35;transition:opacity 0.4s ease}
+.exp-icon svg{width:24px;height:24px;stroke-width:1.5}
+.exp-card:hover .exp-icon{opacity:0.6}
+.exp-card h3{font-family:'Cormorant Garamond',serif;font-size:26px;margin-bottom:14px;color:var(--cream);padding-right:40px}
 .exp-card p{font-size:14px;color:rgba(251,247,244,0.7);line-height:1.8}
 .exp-num{font-family:'DM Sans',sans-serif;font-size:11px;color:rgba(251,247,244,0.35);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;font-weight:400}
 
