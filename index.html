@@ -13,7 +13,9 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" type="image/webp" href="bramble-logo-clean.webp">
+<link rel="preload" as="image" type="image/webp" href="img/hero-bg.webp">
 <style>
 /* ── Reset & Base ── */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -90,6 +92,7 @@ section{padding:120px 0}
 .about{background:var(--cream)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .about-visual{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:4/5}
+.about-visual picture{display:contents}
 .about-visual img{width:100%;height:100%;object-fit:cover}
 .about-visual::before{content:'';position:absolute;top:-8px;left:-8px;right:8px;bottom:8px;border:1px solid var(--sage);border-radius:4px;opacity:0.2;z-index:-1}
 .about-visual::after{content:'';position:absolute;inset:0;border:1px solid rgba(5,32,0,0.08);border-radius:4px;pointer-events:none}
@@ -231,6 +234,7 @@ section{padding:120px 0}
 .audience-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;margin-top:64px}
 .audience-card{background:#fff;border-radius:4px;overflow:hidden;border:1px solid rgba(5,32,0,0.05);transition:all 0.3s}
 .audience-card:hover{border-color:var(--sage);transform:translateY(-2px);box-shadow:0 12px 40px rgba(5,32,0,0.06)}
+.audience-card picture{display:block}
 .audience-card img{width:100%;height:180px;object-fit:cover;display:block;transition:transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94)}
 .audience-card:hover img{transform:scale(1.06)}
 .audience-card-body{padding:32px}
@@ -377,6 +381,10 @@ footer a:hover{color:var(--cream)}
   .footer-col a{font-size:13px;margin-bottom:8px}
   .footer-bottom{flex-direction:column;gap:6px;text-align:center}
   .section-divider{padding:32px 0}
+  .exp-card{padding:28px 20px}
+  .exp-num{font-size:48px}
+  .pullquote-bg{display:none}
+  .pullquote{background:linear-gradient(160deg,#0a2010 0%,#052000 100%)}
   textarea{min-height:120px}
   [data-parallax]{transform:none !important}
 }
@@ -418,9 +426,9 @@ footer a:hover{color:var(--cream)}
 
 <!-- ── Hero ── -->
 <section class="hero">
-  <img src="img/hero-bg.png" alt="" class="hero-bg-img" loading="eager" data-parallax="0.15">
+  <picture><source srcset="img/hero-bg.webp" type="image/webp"><img src="img/hero-bg.jpg" alt="" class="hero-bg-img" loading="eager" data-parallax="0.15"></picture>
   <div class="hero-content">
-    <img src="bramble-logo-clean.png" alt="Bramble logo, a toad illustration above the word Bramble in serif type" class="hero-logo">
+    <picture><source srcset="bramble-logo-clean.webp" type="image/webp"><img src="bramble-logo-sm.png" alt="Bramble logo, a toad illustration above the word Bramble in serif type" class="hero-logo"></picture>
     <p class="lead">Digital maps that turn your grounds into stories worth exploring.</p>
     <a href="#contact" class="hero-cta">Start a Conversation</a>
   </div>
@@ -432,7 +440,7 @@ footer a:hover{color:var(--cream)}
   <div class="container">
     <div class="about-grid">
       <div class="about-visual fade-up">
-        <img src="img/about-grounds.jpg" alt="Woodland path through English bluebell wood with mossy trees" data-parallax="0.08">
+        <picture><source srcset="img/about-grounds.webp" type="image/webp"><img src="img/about-grounds-opt.jpg" alt="Woodland path through English bluebell wood with mossy trees" loading="lazy" data-parallax="0.08"></picture>
       </div>
       <div class="about-text fade-up">
         <p class="section-label">The Problem</p>
@@ -559,7 +567,7 @@ footer a:hover{color:var(--cream)}
               <div class="map-gps"></div>
               <!-- Card 1: appears at pin 1 -->
               <div class="phone-card phone-card--first">
-                <img src="img/ancient-oak-web.jpg" alt="Ancient oak tree in golden light" class="phone-card-img">
+                <picture><source srcset="img/ancient-oak-web.webp" type="image/webp"><img src="img/ancient-oak-web.jpg" alt="Ancient oak tree in golden light" class="phone-card-img" loading="lazy"></picture>
                 <div class="phone-card-body">
                   <div class="phone-card-label">Discovery Point</div>
                   <div class="phone-card-title">The Ancient Oak</div>
@@ -574,7 +582,7 @@ footer a:hover{color:var(--cream)}
               </div>
               <!-- Card 2: appears at pin 5 -->
               <div class="phone-card phone-card--second">
-                <img src="img/walled-garden.jpg" alt="English walled garden with climbing roses and stone sundial" class="phone-card-img">
+                <picture><source srcset="img/walled-garden.webp" type="image/webp"><img src="img/walled-garden-opt.jpg" alt="English walled garden with climbing roses and stone sundial" class="phone-card-img" loading="lazy"></picture>
                 <div class="phone-card-body">
                   <div class="phone-card-label">Hidden Gem</div>
                   <div class="phone-card-title">The Walled Garden</div>
@@ -603,7 +611,7 @@ footer a:hover{color:var(--cream)}
     <p class="section-subtitle">If your grounds are part of the experience, Bramble makes them the highlight.</p>
     <div class="audience-grid">
       <div class="audience-card fade-up">
-        <img src="img/card-estate.png" alt="Aerial view of English country estate" loading="lazy">
+        <picture><source srcset="img/card-estate.webp" type="image/webp"><img src="img/card-estate.jpg" alt="Aerial view of English country estate" loading="lazy"></picture>
         <div class="audience-card-body">
           <div class="card-line"></div>
           <h3>Country Estates &amp; Hotels</h3>
@@ -611,7 +619,7 @@ footer a:hover{color:var(--cream)}
         </div>
       </div>
       <div class="audience-card fade-up">
-        <img src="img/card-wellness.png" alt="Wellness retreat in wildflower meadow" loading="lazy">
+        <picture><source srcset="img/card-wellness.webp" type="image/webp"><img src="img/card-wellness.jpg" alt="Wellness retreat in wildflower meadow" loading="lazy"></picture>
         <div class="audience-card-body">
           <div class="card-line"></div>
           <h3>Wellness Retreats</h3>
@@ -619,7 +627,7 @@ footer a:hover{color:var(--cream)}
         </div>
       </div>
       <div class="audience-card fade-up">
-        <img src="img/card-garden.png" alt="Formal English walled garden" loading="lazy">
+        <picture><source srcset="img/card-garden.webp" type="image/webp"><img src="img/card-garden.jpg" alt="Formal English walled garden" loading="lazy"></picture>
         <div class="audience-card-body">
           <div class="card-line"></div>
           <h3>Gardens &amp; Historic Houses</h3>
@@ -632,7 +640,7 @@ footer a:hover{color:var(--cream)}
 
 <!-- ── Pull Quote ── -->
 <section class="pullquote">
-  <img src="img/about-grounds.jpg" alt="" class="pullquote-bg">
+  <picture><source srcset="img/about-grounds.webp" type="image/webp"><img src="img/about-grounds-opt.jpg" alt="" class="pullquote-bg" loading="lazy"></picture>
   <div class="container">
     <div class="ornament">"</div>
     <blockquote>Every estate tells a story through its paths, gardens, and hidden corners. We help guests find the ones worth knowing.</blockquote>
@@ -697,7 +705,7 @@ footer a:hover{color:var(--cream)}
   <div class="container">
     <div class="footer-top">
       <div>
-        <img src="bramble-logo-clean.png" alt="Bramble" style="width:120px;height:auto;opacity:0.7;display:block">
+        <picture><source srcset="bramble-logo-clean.webp" type="image/webp"><img src="bramble-logo-sm.png" alt="Bramble" style="width:120px;height:auto;opacity:0.7;display:block" loading="lazy"></picture>
       </div>
       <div class="footer-links">
         <div class="footer-col">
