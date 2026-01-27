@@ -99,7 +99,9 @@ section{padding:120px 0}
 .step-num{font-family:'Cormorant Garamond',serif;font-size:52px;color:var(--rose);margin-bottom:16px;line-height:1}
 .step h3{font-size:22px;margin-bottom:14px;font-family:'Cormorant Garamond',serif}
 .step p{font-size:14px;color:var(--sage);line-height:1.7}
-.step-divider{width:40px;height:1px;background:var(--sage);margin:24px auto 0;opacity:0.3}
+.step-divider{width:32px;height:2px;background:var(--rose);margin:28px auto 0;opacity:0.35;border-radius:1px}
+.step-icon{margin-bottom:8px;opacity:0.5}
+.step-icon svg{width:28px;height:28px}
 
 /* ── Experience ── */
 .experience{background:var(--forest);color:var(--cream);position:relative;overflow:hidden}
@@ -230,9 +232,10 @@ section{padding:120px 0}
 .pullquote{background:var(--chocolate);padding:100px 0;text-align:center;position:relative;overflow:hidden}
 .pullquote-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.15;filter:saturate(0)}
 .pullquote .container{position:relative;z-index:1}
-.pullquote .ornament{display:block;margin:0 auto 32px;width:40px;height:1px;background:var(--rose);opacity:0.6}
-.pullquote blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.5vw,40px);font-style:italic;color:var(--cream);max-width:720px;margin:0 auto;line-height:1.5}
-.pullquote cite{display:block;margin-top:28px;font-style:normal;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:rgba(251,247,244,0.4)}
+.pullquote .ornament{display:block;margin:0 auto 24px;font-family:'Cormorant Garamond',serif;font-size:120px;line-height:0.6;color:var(--rose);opacity:0.35}
+.pullquote blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.5vw,40px);font-style:italic;color:var(--cream);max-width:720px;margin:0 auto;line-height:1.5;position:relative}
+.pullquote cite{display:block;margin-top:32px;font-style:normal;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:rgba(251,247,244,0.4)}
+.pullquote cite::before{content:'';display:block;width:32px;height:1px;background:var(--rose);margin:0 auto 16px;opacity:0.5}
 
 /* ── CTA ── */
 .cta-section{background:var(--forest);padding:120px 0;text-align:center;position:relative;overflow:hidden}
@@ -410,7 +413,12 @@ footer a:hover{color:var(--cream)}
 
 <!-- ── Divider ── -->
 <div class="section-divider" style="background:var(--cream)">
-  <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="3" fill="#6B7F6B"/><line x1="0" y1="16" x2="11" y2="16" stroke="#6B7F6B" stroke-width="0.5"/><line x1="21" y1="16" x2="32" y2="16" stroke="#6B7F6B" stroke-width="0.5"/></svg>
+  <svg width="120" height="16" viewBox="0 0 120 16" fill="none">
+    <line x1="0" y1="8" x2="48" y2="8" stroke="var(--sage)" stroke-width="0.5" opacity="0.3"/>
+    <circle cx="60" cy="8" r="3" fill="none" stroke="var(--rose)" stroke-width="1" opacity="0.4"/>
+    <circle cx="60" cy="8" r="1" fill="var(--rose)" opacity="0.3"/>
+    <line x1="72" y1="8" x2="120" y2="8" stroke="var(--sage)" stroke-width="0.5" opacity="0.3"/>
+  </svg>
 </div>
 
 <!-- ── How It Works ── -->
@@ -421,18 +429,21 @@ footer a:hover{color:var(--cream)}
     <p class="section-subtitle">We do the heavy lifting. You bring the local knowledge. Together, we build something your guests won't forget.</p>
     <div class="steps">
       <div class="step fade-up">
+        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
         <div class="step-num">1</div>
         <h3>We Walk Your Grounds</h3>
         <p>Together, we explore your estate and choose the moments that matter — the ancient oak, the hidden folly, the view your regulars already love.</p>
         <div class="step-divider"></div>
       </div>
       <div class="step fade-up">
+        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
         <div class="step-num">2</div>
         <h3>We Shape the Stories</h3>
         <p>You know your place best. Share the history, the folklore, the details guests should discover — we'll turn them into rich, layered stories with photos, text, and audio.</p>
         <div class="step-divider"></div>
       </div>
       <div class="step fade-up">
+        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
         <div class="step-num">3</div>
         <h3>Guests Explore</h3>
         <p>A QR code at reception. Guests scan, open the map, and wander. Stories appear as they arrive at each spot. No download. No delays. Just discovery.</p>
@@ -590,8 +601,8 @@ footer a:hover{color:var(--cream)}
 <section class="pullquote">
   <img src="img/about-grounds.jpg" alt="" class="pullquote-bg">
   <div class="container">
-    <div class="ornament"></div>
-    <blockquote>"Every estate tells a story through its paths, gardens, and hidden corners. We help guests find the ones worth knowing."</blockquote>
+    <div class="ornament">"</div>
+    <blockquote>Every estate tells a story through its paths, gardens, and hidden corners. We help guests find the ones worth knowing.</blockquote>
     <cite>The Bramble Team</cite>
   </div>
 </section>
@@ -653,8 +664,7 @@ footer a:hover{color:var(--cream)}
   <div class="container">
     <div class="footer-top">
       <div>
-        <div class="footer-brand">Bramble</div>
-        <div class="footer-tagline">Bespoke Digital Maps</div>
+        <img src="bramble-logo-clean.png" alt="Bramble" style="width:120px;height:auto;opacity:0.7;display:block">
       </div>
       <div class="footer-links">
         <div class="footer-col">
