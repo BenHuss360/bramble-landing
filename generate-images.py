@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
 """Generate images for Bramble landing page using Imagen 4."""
 
-import sys
+import os, sys
 from pathlib import Path
 from google import genai
 from google.genai import types
 
-API_KEY = "REDACTED"
+API_KEY = os.environ.get("GEMINI_API_KEY")
+if not API_KEY:
+    key_file = Path.home() / ".config" / "gemini" / "api_key"
+    if key_file.exists():
+        API_KEY = key_file.read_text().strip()
+    else:
+        sys.exit("Set GEMINI_API_KEY env var or put key in ~/.config/gemini/api_key")
 client = genai.Client(api_key=API_KEY)
 OUTPUT_DIR = Path("/root/clawd/bramble-landing/img")
 OUTPUT_DIR.mkdir(exist_ok=True)
