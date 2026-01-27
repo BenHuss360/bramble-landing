@@ -150,15 +150,16 @@ section{padding:120px 0}
 .experience .container{position:relative;z-index:1}
 .experience .section-label{color:var(--sage-light)}
 .experience .section-title{color:var(--cream)}
-.experience .section-subtitle{color:rgba(251,247,244,0.6)}
+.experience .section-subtitle{color:rgba(251,247,244,0.7)}
 .exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:64px}
-.exp-card{border:1px solid rgba(251,247,244,0.08);border-radius:6px;padding:48px 40px;transition:all 0.4s ease;position:relative;overflow:hidden;background:rgba(251,247,244,0.04);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-.exp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(251,247,244,0.1),transparent);opacity:1}
-.exp-card:hover{border-color:rgba(251,247,244,0.14);transform:translateY(-3px);box-shadow:0 20px 60px rgba(0,0,0,0.25);background:rgba(251,247,244,0.06)}
-.exp-icon{width:48px;height:48px;border-radius:50%;background:rgba(251,247,244,0.06);border:1px solid rgba(251,247,244,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:all 0.4s}
-.exp-card:hover .exp-icon{background:rgba(251,247,244,0.1);border-color:rgba(251,247,244,0.18)}
+.exp-card{border:1px solid rgba(251,247,244,0.1);border-radius:6px;padding:40px 36px;transition:all 0.4s ease;position:relative;overflow:hidden;background:rgba(251,247,244,0.03)}
+.exp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(251,247,244,0.12),transparent)}
+.exp-card:hover{border-color:rgba(251,247,244,0.16);transform:translateY(-3px);box-shadow:0 20px 60px rgba(0,0,0,0.25);background:rgba(251,247,244,0.05)}
+.exp-icon{margin-bottom:24px}
+.exp-icon svg{width:28px;height:28px;stroke-width:1.5;opacity:0.8}
+.exp-card:hover .exp-icon svg{opacity:1}
 .exp-card h3{font-family:'Cormorant Garamond',serif;font-size:26px;margin-bottom:14px;color:var(--cream)}
-.exp-card p{font-size:14px;color:rgba(251,247,244,0.55);line-height:1.8}
+.exp-card p{font-size:14px;color:rgba(251,247,244,0.7);line-height:1.8}
 .exp-num{font-family:'DM Sans',sans-serif;font-size:11px;color:rgba(251,247,244,0.35);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;font-weight:400}
 
 /* ── Phone Mockup ── */
@@ -536,28 +537,28 @@ footer a:hover{color:var(--cream)}
     <div class="exp-grid">
       <div class="exp-card fade-up">
         <div class="exp-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(251,247,244,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12" y2="18.01" stroke-width="2"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8B88A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12" y2="18.01" stroke-width="2"/></svg>
         </div>
         <h3>No App Required</h3>
         <p>Opens instantly in any mobile browser. Scan a QR code, tap a link, or find it on your guest WiFi portal. Nothing to install, nothing to learn.</p>
       </div>
       <div class="exp-card fade-up">
         <div class="exp-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(251,247,244,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5 8 12 8 12s8-7 8-12a8 8 0 0 0-8-8z"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8B88A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5 8 12 8 12s8-7 8-12a8 8 0 0 0-8-8z"/></svg>
         </div>
         <h3>Stories Find You</h3>
         <p>Stories unlock as guests arrive at each point of interest. The map knows where they are and reveals the right story at the right moment.</p>
       </div>
       <div class="exp-card fade-up">
         <div class="exp-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(251,247,244,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="9" y1="7" x2="16" y2="7"/><line x1="9" y1="11" x2="14" y2="11"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8B88A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="9" y1="7" x2="16" y2="7"/><line x1="9" y1="11" x2="14" y2="11"/></svg>
         </div>
         <h3>Rich Storytelling</h3>
         <p>Photos, written narratives, audio. Each spot tells a story worth stopping for. History, ecology, seasonal notes, local lore.</p>
       </div>
       <div class="exp-card fade-up">
         <div class="exp-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(251,247,244,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M9 16c1.5-2 4-2 5 0"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8B88A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M9 16c1.5-2 4-2 5 0"/></svg>
         </div>
         <h3>Seasonal Updates</h3>
         <p>Your grounds change through the year. So can your map. Swap in spring wildflower routes, autumn colour walks, or winter wildlife trails.</p>
