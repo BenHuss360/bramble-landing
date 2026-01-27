@@ -719,6 +719,9 @@ footer a:hover{color:var(--cream)}
 
 <!-- ── Scripts ── -->
 <script>
+// Mobile detection (must be before updateParallax)
+const isMobile = window.matchMedia('(max-width:600px)').matches;
+
 // Nav scroll effect
 const nav = document.getElementById('nav');
 
@@ -783,9 +786,6 @@ if (stickyCta && heroSection) {
   }, { threshold: 0 });
   stickyObs.observe(heroSection);
 }
-
-// Disable parallax on mobile
-const isMobile = window.matchMedia('(max-width:600px)').matches;
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(a => {
