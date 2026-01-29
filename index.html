@@ -94,15 +94,38 @@ nav .container{display:flex;align-items:center;justify-content:space-between}
 .sticky-cta a{display:block;text-align:center;padding:14px;background:var(--rose);color:var(--cream);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-family:'DM Sans',sans-serif;font-weight:500;text-decoration:none;border-radius:4px}
 
 /* ── Hero ── */
-.hero{min-height:100vh;background:var(--forest);display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
+.hero{min-height:100vh;background:var(--forest);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.8}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(5,32,0,0.15) 0%,rgba(5,32,0,0.55) 70%);z-index:1}
 .hero-content{position:relative;z-index:2;padding:120px 32px 80px;opacity:0;transform:translateY(30px);animation:heroContentReveal 1s cubic-bezier(0.4,0,0.2,1) 2.8s forwards}
+.hero-split{display:flex;align-items:center;gap:60px;max-width:1120px;width:100%;text-align:left}
+.hero-text{flex:1;max-width:520px}
+.hero-headline{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(36px,5vw,56px);color:var(--cream);margin-bottom:20px;font-weight:400;line-height:1.15}
+.hero-sub{font-size:17px;color:rgba(251,247,244,0.65);margin-bottom:40px;line-height:1.75;max-width:440px}
 @keyframes heroContentReveal{0%{opacity:0;transform:translateY(30px)}100%{opacity:1;transform:translateY(0)}}
 .hero-logo{width:320px;height:auto;margin:0 auto 48px;display:block;opacity:0.95}
 .hero-toad{width:100px;height:auto;margin:0 auto 32px;display:block;opacity:0.85}
 .hero h1{font-size:clamp(40px,6vw,72px);color:var(--cream);margin-bottom:20px;font-weight:400}
 .hero .lead{font-size:clamp(18px,2.2vw,22px);color:rgba(251,247,244,0.75);max-width:580px;margin:0 auto 52px;font-weight:300;line-height:1.8;text-shadow:0 1px 12px rgba(0,0,0,0.3)}
+/* Hero Phone Mockup */
+.hero-phone{flex:1;display:flex;justify-content:center}
+.phone-frame-hero{width:260px;height:520px;background:#000;border-radius:40px;padding:10px;box-shadow:0 30px 80px rgba(0,0,0,0.5);position:relative}
+.phone-screen-hero{width:100%;height:100%;background:#1a1a1a;border-radius:32px;overflow:hidden;position:relative}
+.phone-notch-hero{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:80px;height:24px;background:#000;border-radius:12px;z-index:10}
+.phone-map-hero{position:absolute;inset:0;background:linear-gradient(160deg,#173d20 0%,#0e2a14 50%,#1a4025 100%);overflow:hidden}
+.phone-mapbar-hero{position:absolute;top:40px;left:0;right:0;padding:8px 14px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--cream);opacity:0.9}
+.phone-mapbar-pill-hero{font-size:9px;background:rgba(251,247,244,0.1);padding:3px 8px;border-radius:10px;opacity:0.6}
+.map-pin-hero{position:absolute;width:16px;height:20px}
+.map-pin-hero::before{content:'';position:absolute;width:16px;height:16px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--rose);border:2px solid rgba(255,255,255,0.9);box-shadow:0 2px 6px rgba(0,0,0,0.35)}
+.map-gps-hero{position:absolute;top:50%;left:38%;width:12px;height:12px;border-radius:50%;background:#4a9eff;border:2px solid white;box-shadow:0 0 12px rgba(74,158,255,0.5);animation:gpsPulse 2s ease infinite}
+@keyframes gpsPulse{0%,100%{box-shadow:0 0 12px rgba(74,158,255,0.5)}50%{box-shadow:0 0 20px rgba(74,158,255,0.8)}}
+.phone-card-hero{position:absolute;bottom:0;left:0;right:0;background:var(--cream);border-radius:14px 14px 0 0;padding:14px 16px 18px;box-shadow:0 -4px 20px rgba(0,0,0,0.3)}
+.phone-card-label-hero{font-size:8px;letter-spacing:2px;color:var(--sage);margin-bottom:4px}
+.phone-card-title-hero{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--forest);margin-bottom:6px}
+.phone-card-desc-hero{font-size:11px;color:#5a6a5a;line-height:1.5;margin-bottom:10px}
+.phone-card-audio-hero{display:flex;align-items:center;gap:10px;font-size:11px;color:var(--sage)}
+.play-btn-hero{width:32px;height:32px;background:linear-gradient(135deg,#c9a55a 0%,#a68540 100%);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.play-btn-hero svg{width:12px;height:12px;margin-left:2px}
 .hero-cta{display:inline-block;padding:16px 40px;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;font-family:'DM Sans',sans-serif;font-weight:500;color:var(--forest);background:var(--cream);text-decoration:none;border-radius:2px;transition:all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);box-shadow:0 2px 8px rgba(0,0,0,0.1)}
 .hero-cta:hover{background:var(--rose);color:#fff;transform:translateY(-2px);box-shadow:0 8px 24px rgba(208,84,102,0.25)}
 .hero-cta:active{transform:translateY(0);box-shadow:0 2px 8px rgba(208,84,102,0.15)}
@@ -370,12 +393,21 @@ footer a:hover{color:var(--cream)}
   .footer-top{flex-direction:column;gap:40px}
   .footer-links{gap:32px}
 }
+@media(max-width:900px){
+  .hero-split{flex-direction:column;text-align:center;gap:40px}
+  .hero-text{max-width:100%}
+  .hero-sub{max-width:100%;margin-left:auto;margin-right:auto}
+  .phone-frame-hero{width:220px;height:440px}
+}
 @media(max-width:600px){
   section{padding:64px 0}
   .container{padding:0 20px}
-  .hero-content{padding:80px 20px 48px}
+  .hero-content{padding:100px 20px 48px}
   .hero-logo{width:220px}
   .brand-intro-logo{width:220px}
+  .hero-headline{font-size:32px}
+  .hero-sub{font-size:15px}
+  .hero-phone{display:none}
   @keyframes logoShrinkMove{0%{top:50%;left:50%;transform:translate(-50%,-50%) scale(1);opacity:0.95}100%{top:16px;left:20px;transform:translate(0,0) scale(0.45);opacity:0.95}}
   .hero .lead{font-size:17px;margin-bottom:36px}
   .hero-cta{padding:14px 32px;width:100%;text-align:center;box-sizing:border-box}
@@ -468,10 +500,39 @@ footer a:hover{color:var(--cream)}
 <!-- ── Hero ── -->
 <section class="hero">
   <picture><source srcset="img/hero-bg.webp" type="image/webp"><img src="img/hero-bg.jpg" alt="" class="hero-bg-img" loading="eager" data-parallax="0.15"></picture>
-  <div class="hero-content">
-    <h1 class="sr-only">Bramble — Story Maps for Extraordinary Estates</h1>
-    <p class="lead">Stories that find your guests as they wander your grounds.</p>
-    <a href="#contact" class="hero-cta">Get In Touch</a>
+  <div class="hero-content hero-split">
+    <div class="hero-text">
+      <h1 class="sr-only">Bramble — Story Maps for Extraordinary Estates</h1>
+      <p class="hero-headline">Stories that find your guests as they wander.</p>
+      <p class="hero-sub">Turn your grounds into a self-guided experience. History, nature, and hidden corners unlock as guests explore.</p>
+      <a href="#contact" class="hero-cta">Get In Touch</a>
+    </div>
+    <div class="hero-phone">
+      <div class="phone-frame-hero">
+        <div class="phone-screen-hero">
+          <div class="phone-notch-hero"></div>
+          <div class="phone-map-hero">
+            <div class="phone-mapbar-hero">
+              <span>Bramble</span>
+              <span class="phone-mapbar-pill-hero">5 spots</span>
+            </div>
+            <div class="map-pin-hero" style="top:28%;left:24%"></div>
+            <div class="map-pin-hero" style="top:42%;left:46%"></div>
+            <div class="map-pin-hero" style="top:58%;left:64%"></div>
+            <div class="map-gps-hero"></div>
+            <div class="phone-card-hero">
+              <div class="phone-card-label-hero">DISCOVERY</div>
+              <div class="phone-card-title-hero">The Ancient Oak</div>
+              <div class="phone-card-desc-hero">This 400-year-old oak has watched over the estate since the Civil War.</div>
+              <div class="phone-card-audio-hero">
+                <div class="play-btn-hero"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#1a2a1a"/></svg></div>
+                <span>Listen · 2:15</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <a href="#about" class="hero-scroll">Discover<span></span></a>
 </section>
