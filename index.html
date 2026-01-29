@@ -109,23 +109,23 @@ nav .container{display:flex;align-items:center;justify-content:space-between}
 .hero .lead{font-size:clamp(18px,2.2vw,22px);color:rgba(251,247,244,0.75);max-width:580px;margin:0 auto 52px;font-weight:300;line-height:1.8;text-shadow:0 1px 12px rgba(0,0,0,0.3)}
 /* Hero Phone Mockup */
 .hero-phone{flex:1;display:flex;justify-content:center}
-.phone-frame-hero{width:260px;height:520px;background:#000;border-radius:40px;padding:10px;box-shadow:0 30px 80px rgba(0,0,0,0.5);position:relative}
-.phone-screen-hero{width:100%;height:100%;background:#1a1a1a;border-radius:32px;overflow:hidden;position:relative}
-.phone-notch-hero{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:80px;height:24px;background:#000;border-radius:12px;z-index:10}
-.phone-map-hero{position:absolute;inset:0;background:linear-gradient(160deg,#173d20 0%,#0e2a14 50%,#1a4025 100%);overflow:hidden}
-.phone-mapbar-hero{position:absolute;top:40px;left:0;right:0;padding:8px 14px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--cream);opacity:0.9}
-.phone-mapbar-pill-hero{font-size:9px;background:rgba(251,247,244,0.1);padding:3px 8px;border-radius:10px;opacity:0.6}
-.map-pin-hero{position:absolute;width:16px;height:20px}
-.map-pin-hero::before{content:'';position:absolute;width:16px;height:16px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--rose);border:2px solid rgba(255,255,255,0.9);box-shadow:0 2px 6px rgba(0,0,0,0.35)}
-.map-gps-hero{position:absolute;top:50%;left:38%;width:12px;height:12px;border-radius:50%;background:#4a9eff;border:2px solid white;box-shadow:0 0 12px rgba(74,158,255,0.5);animation:gpsPulse 2s ease infinite}
-@keyframes gpsPulse{0%,100%{box-shadow:0 0 12px rgba(74,158,255,0.5)}50%{box-shadow:0 0 20px rgba(74,158,255,0.8)}}
-.phone-card-hero{position:absolute;bottom:0;left:0;right:0;background:var(--cream);border-radius:14px 14px 0 0;padding:14px 16px 18px;box-shadow:0 -4px 20px rgba(0,0,0,0.3)}
-.phone-card-label-hero{font-size:8px;letter-spacing:2px;color:var(--sage);margin-bottom:4px}
-.phone-card-title-hero{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--forest);margin-bottom:6px}
-.phone-card-desc-hero{font-size:11px;color:#5a6a5a;line-height:1.5;margin-bottom:10px}
-.phone-card-audio-hero{display:flex;align-items:center;gap:10px;font-size:11px;color:var(--sage)}
-.play-btn-hero{width:32px;height:32px;background:linear-gradient(135deg,#c9a55a 0%,#a68540 100%);border-radius:50%;display:flex;align-items:center;justify-content:center}
-.play-btn-hero svg{width:12px;height:12px;margin-left:2px}
+.phone-frame-hero{width:280px;height:580px;background:#000;border-radius:44px;padding:12px;box-shadow:0 30px 80px rgba(0,0,0,0.5);position:relative}
+.phone-screen-hero{width:100%;height:100%;background:#1a2a1a;border-radius:36px;overflow:hidden;display:flex;flex-direction:column}
+.phone-notch-hero{position:absolute;top:18px;left:50%;transform:translateX(-50%);width:90px;height:26px;background:#000;border-radius:14px;z-index:10}
+.phone-hero-img{width:100%;height:220px;background:linear-gradient(to bottom,transparent 0%,transparent 40%,rgba(45,35,25,0.3) 70%,#1a2a1a 100%),linear-gradient(135deg,#2d4a2d 0%,#1a3a1a 50%,#0d2a0d 100%);background-size:cover;background-position:center}
+.phone-content-card{background:#1a2a1a;padding:16px;flex:1;display:flex;flex-direction:column}
+.phone-badge{display:inline-block;background:rgba(184,150,90,0.12);border:1px solid rgba(184,150,90,0.2);color:#c9a55a;padding:5px 12px;border-radius:4px;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;width:fit-content}
+.phone-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:500;color:#f5efe6;line-height:1.25;margin-bottom:12px}
+.phone-desc{font-size:12px;line-height:1.6;color:#c9b896;margin-bottom:auto}
+.phone-audio{background:rgba(255,255,255,0.04);border:1px solid rgba(184,150,90,0.12);border-radius:10px;padding:12px 14px;display:flex;align-items:center;gap:12px;margin-top:16px}
+.phone-play-btn{width:40px;height:40px;background:linear-gradient(135deg,#c9a55a 0%,#a68540 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.phone-play-btn svg{width:16px;height:16px;margin-left:2px}
+.phone-audio-info{flex:1}
+.phone-audio-label{font-size:12px;color:#f5efe6;font-weight:500;margin-bottom:5px}
+.phone-waveform{display:flex;align-items:center;gap:2px;height:18px}
+.phone-waveform span{width:2.5px;background:#b8965a;border-radius:2px}
+.phone-waveform span.dim{opacity:0.3}
+.phone-duration{font-size:11px;color:#8a8070}
 .hero-cta{display:inline-block;padding:16px 40px;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;font-family:'DM Sans',sans-serif;font-weight:500;color:var(--forest);background:var(--cream);text-decoration:none;border-radius:2px;transition:all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);box-shadow:0 2px 8px rgba(0,0,0,0.1)}
 .hero-cta:hover{background:var(--rose);color:#fff;transform:translateY(-2px);box-shadow:0 8px 24px rgba(208,84,102,0.25)}
 .hero-cta:active{transform:translateY(0);box-shadow:0 2px 8px rgba(208,84,102,0.15)}
@@ -397,7 +397,9 @@ footer a:hover{color:var(--cream)}
   .hero-split{flex-direction:column;text-align:center;gap:40px}
   .hero-text{max-width:100%}
   .hero-sub{max-width:100%;margin-left:auto;margin-right:auto}
-  .phone-frame-hero{width:220px;height:440px}
+  .phone-frame-hero{width:240px;height:500px}
+  .phone-hero-img{height:180px}
+  .phone-title{font-size:17px}
 }
 @media(max-width:600px){
   section{padding:64px 0}
@@ -509,25 +511,25 @@ footer a:hover{color:var(--cream)}
     </div>
     <div class="hero-phone">
       <div class="phone-frame-hero">
+        <div class="phone-notch-hero"></div>
         <div class="phone-screen-hero">
-          <div class="phone-notch-hero"></div>
-          <div class="phone-map-hero">
-            <div class="phone-mapbar-hero">
-              <span>Bramble</span>
-              <span class="phone-mapbar-pill-hero">5 spots</span>
-            </div>
-            <div class="map-pin-hero" style="top:28%;left:24%"></div>
-            <div class="map-pin-hero" style="top:42%;left:46%"></div>
-            <div class="map-pin-hero" style="top:58%;left:64%"></div>
-            <div class="map-gps-hero"></div>
-            <div class="phone-card-hero">
-              <div class="phone-card-label-hero">DISCOVERY</div>
-              <div class="phone-card-title-hero">The Ancient Oak</div>
-              <div class="phone-card-desc-hero">This 400-year-old oak has watched over the estate since the Civil War.</div>
-              <div class="phone-card-audio-hero">
-                <div class="play-btn-hero"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#1a2a1a"/></svg></div>
-                <span>Listen · 2:15</span>
+          <div class="phone-hero-img"></div>
+          <div class="phone-content-card">
+            <span class="phone-badge">HISTORY</span>
+            <h3 class="phone-title">Where Three Centuries Welcome You Home</h3>
+            <p class="phone-desc">You're standing where visitors have paused for nearly 300 years.</p>
+            <div class="phone-audio">
+              <div class="phone-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#1a2a1a"/></svg></div>
+              <div class="phone-audio-info">
+                <div class="phone-audio-label">Now playing</div>
+                <div class="phone-waveform">
+                  <span style="height:4px"></span><span style="height:7px"></span><span style="height:11px"></span>
+                  <span style="height:14px"></span><span style="height:9px"></span><span style="height:16px"></span>
+                  <span style="height:11px"></span><span style="height:7px"></span><span style="height:12px"></span>
+                  <span style="height:14px" class="dim"></span><span style="height:5px" class="dim"></span><span style="height:8px" class="dim"></span>
+                </div>
               </div>
+              <span class="phone-duration">2:15</span>
             </div>
           </div>
         </div>
